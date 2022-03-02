@@ -1,0 +1,61 @@
+#header {
+  text-align: center;
+  color: turquoise;
+  top: 0;
+  background-color: black;
+}
+#footer {
+  text-align: center;
+  color: blue;
+  bottom: 0;
+}
+#header,
+#footer {
+  width: 100%;
+  position: fixed;
+  background: black;
+  padding: 20px;
+  font-size: 20px;
+}
+body {
+  margin: 0;
+}
+.intro {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 40px;
+}
+.form1 {
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 30px;
+  float: left;
+  margin-left: 30%;
+}
+.form2 {
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 30px;
+  float: right;
+  margin-right: 30%;
+}
+#but {
+  text-align: center;
+  width: 100%;
+}
+#buttonCoupon {
+  margin-top: 20px;
+  font-size: 20px;
+  color: blue;
+}
+#discounted {
+  text-align: center;
+  font-size: 40px;
+  border: 2px solid lime;
+  border-radius: 10px;
+  background-color: aquamarine;
+}
+#products {
+  text-align: center;
+  font-size: 30px;
+}
