@@ -1,0 +1,13 @@
+.search {
+  background-color: skyblue;
+  border: solid 1px black;
+  border-radius: 5%;
+  font-weight: bold;
+  outline-color: aqua;
+  text-align: center;
+  margin-left: 43%;
+  float: left;
+}
+.searchButton {
+  text-align: center;
+}
