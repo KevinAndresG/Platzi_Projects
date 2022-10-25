@@ -1,2 +1,2 @@
 # Platzi_Projects
-here i'm uploading all the projects that i make in every platzi course
+here I will upload the Platzi projects that I am doing.
