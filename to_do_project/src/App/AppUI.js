@@ -4,29 +4,20 @@ import { ToDoSearch } from '../ToDoSearch';
 import { CreateToDo } from '../CreateToDo';
 import { ToDoList } from '../ToDoList';
 import { ToDoItem } from '../ToDoItem';
+import { ToDoContext } from '../ToDoContext'
+import { Modal } from "../Modal";
 
-function AppUI(
-    {
+function AppUI() {
+    const { error,
         loading,
-        error,
-        TotalToDos,
-        ToDosCompleted,
-        searchValue,
-        setSearchValue,
         searchedToDos,
         completeTodo,
-        deleteTodo,
-    }) {
+        deleteTodo } = React.useContext(ToDoContext)
+
     return (
         <React.Fragment>
-            <ToDoCounter
-                ToDosAmount={TotalToDos}
-                ToDosCompleted={ToDosCompleted}
-            />
-            <ToDoSearch
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
-            />
+            <ToDoCounter />
+            <ToDoSearch />
             <ToDoList>
                 {error && <p>Error Founded!!!</p>}
                 {loading && <p>!!!Wait...Loading!!!</p>}
@@ -38,6 +29,11 @@ function AppUI(
                     completeTodo={() => completeTodo(todo.text)}
                     deleteTodo={() => deleteTodo(todo.text)} />))}
             </ToDoList>
+
+            <Modal>
+                <p>Teleport</p>
+            </Modal>
+
             <CreateToDo />
         </React.Fragment>
     );
