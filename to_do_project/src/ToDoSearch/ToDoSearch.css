@@ -1,0 +1,18 @@
+.search {
+  width: 300px;
+  height: 50px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 50px 10px;
+  border-color: aqua;
+  outline: aqua;
+  /* font-weight: bold; */
+  font-size: larger;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.search::placeholder{
+  color: #ababab;
+}
+.searchButton {
+  text-align: center;
+}

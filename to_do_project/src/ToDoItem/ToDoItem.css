@@ -1,0 +1,43 @@
+.items {
+  margin: 0;
+  color: rgb(81, 81, 81);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.items:hover {
+  width: 100%;
+  /* color: white; */
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 10px cyan, inset 2px 3px 20px cyan;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  /* text-align: center; */
+}
+.icon-check{
+  font-size: larger;
+  margin-top: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.icon-delete{
+  /* color: red; */
+  margin-top: 20px;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.icon-delete:hover{
+  color: red;
+}
+.todoItem-p{
+  width: 90%;
+}
+.icon-check--active{
+  color: rgba(64, 224, 208, 0.527);
+  border-color: red;
+  border-radius: 100%;
+}
+.todoItem-p--completed{
+  text-decoration: line-through turquoise wavy 4px;
+  color: #ababab;
+}

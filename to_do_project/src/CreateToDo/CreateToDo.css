@@ -1,0 +1,28 @@
+.button {
+  position: fixed;
+  font-size: xx-large;
+  font-weight: bold;
+  color: rgb(81, 81, 81);
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px magenta;
+  margin-right: 550px;
+  border-radius: 50%;
+  border: 5px #dfdfdf solid;
+  background-color: #dfdfdf;
+  box-shadow: inset 2px 2px 2px rgb(245, 245, 245), inset -2px -2px 2px #cacaca, 2px 2px 2px rgb(245, 245, 245), -2px -2px 2px #cacaca;
+  bottom: 1%;
+  left: 92%;
+  transition: 0.5s ease;
+}
+.hovCreate:hover {
+  transition: 0.5s ease;
+  box-shadow: -2px -2px 5px cyan, inset -2px -2px 5px white;
+  text-shadow: 0px 1px 1px cyan, 0px -1px 1px cyan;
+  border: none;
+  transform: rotate(90deg);
+}
+.divButton {
+  text-align: center;
+}
