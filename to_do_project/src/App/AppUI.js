@@ -6,6 +6,7 @@ import { ToDoList } from '../ToDoList';
 import { ToDoItem } from '../ToDoItem';
 import { ToDoContext } from '../ToDoContext'
 import { Modal } from "../Modal";
+import { ToDoForm } from "../ToDoForm";
 
 function AppUI() {
     const { error,
@@ -35,7 +36,7 @@ function AppUI() {
 
             {openModal && (
                 <Modal>
-                    <p>Teleport</p>
+                    <ToDoForm />
                 </Modal>
             )}
 

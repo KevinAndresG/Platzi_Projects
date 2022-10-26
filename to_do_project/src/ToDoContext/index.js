@@ -25,6 +25,32 @@ function ToDoProvider(props) {
             return (toDosText.includes(searchText))
         })
     }
+    const CreateTodo = (text) => {
+        if (text.length <= 0) {
+            alert("Introduce A NEW ToDo");
+            return (0);
+        }
+        const newTodos = [...ToDos];
+        let exist = false;
+        newTodos.filter(todo => {
+            const toDosText = todo.text.toLowerCase();
+            const newTodoLower = text.toLowerCase();
+            if (toDosText === newTodoLower) {
+                exist = true;
+            }
+            return(0)
+        });
+        if (exist === false) {
+            newTodos.push({
+                text: text,
+                completed: false,
+            })
+            console.log("No Exist");
+        } else {
+            alert(`This To Do "${text}" Already Exists`);
+        }
+        SaveItem(newTodos);
+    }
     const completeTodo = (text) => {
         const index = ToDos.findIndex(todo => todo.text === text);
         const newTodos = [...ToDos];
@@ -52,6 +78,7 @@ function ToDoProvider(props) {
             searchedToDos,
             completeTodo,
             deleteTodo,
+            CreateTodo,
             openModal,
             setOpenModal,
         }}>
@@ -60,4 +87,4 @@ function ToDoProvider(props) {
     )
 }
 
-export {ToDoContext, ToDoProvider};
+export { ToDoContext, ToDoProvider };
