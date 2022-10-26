@@ -11,17 +11,40 @@
   border-radius: 50%;
   border: 5px #dfdfdf solid;
   background-color: #dfdfdf;
-  box-shadow: inset 2px 2px 2px rgb(245, 245, 245), inset -2px -2px 2px #cacaca, 2px 2px 2px rgb(245, 245, 245), -2px -2px 2px #cacaca;
+  box-shadow: inset 2px 2px 5px rgb(245, 245, 245), inset -2px -2px 5px #b8b8b8, 2px 2px 5px rgb(245, 245, 245), -2px -2px 5px #b8b8b8;
   bottom: 1%;
   left: 92%;
   transition: 0.5s ease;
+  z-index: 5;
 }
+
+.buttonDark {
+  position: fixed;
+  font-size: xx-large;
+  font-weight: bold;
+  color: rgb(225, 225, 225);
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px magenta;
+  margin-right: 550px;
+  border-radius: 50%;
+  border: 5px rgba(75, 75, 75, 0.8) solid;
+  background-color: rgba(75, 75, 75, 0.8);
+  box-shadow: inset 2px 2px 5px rgb(91, 91, 91), inset -2px -2px 5px #1a1a1a, 2px 2px 5px rgb(91, 91, 91), -2px -2px 5px #1a1a1a;
+  bottom: 1%;
+  left: 92%;
+  transition: 0.5s ease;
+  z-index: 1;
+}
+
 .hovCreate:hover {
   transition: 0.5s ease;
   box-shadow: -2px -2px 5px cyan, inset -2px -2px 5px white;
   text-shadow: 0px 1px 1px cyan, 0px -1px 1px cyan;
   border: none;
   transform: rotate(90deg);
+  font-size: 25px;
 }
 .divButton {
   text-align: center;

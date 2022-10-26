@@ -12,7 +12,10 @@ function AppUI() {
         loading,
         searchedToDos,
         completeTodo,
-        deleteTodo } = React.useContext(ToDoContext)
+        deleteTodo,
+        openModal,
+        // setOpenModal,
+    } = React.useContext(ToDoContext)
 
     return (
         <React.Fragment>
@@ -30,9 +33,11 @@ function AppUI() {
                     deleteTodo={() => deleteTodo(todo.text)} />))}
             </ToDoList>
 
-            <Modal>
-                <p>Teleport</p>
-            </Modal>
+            {openModal && (
+                <Modal>
+                    <p>Teleport</p>
+                </Modal>
+            )}
 
             <CreateToDo />
         </React.Fragment>
