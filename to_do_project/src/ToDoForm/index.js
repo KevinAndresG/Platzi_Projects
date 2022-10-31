@@ -1,5 +1,6 @@
 import React from "react";
 import { ToDoContext } from "../ToDoContext";
+import "./ToDoForm.css"
 
 function ToDoForm() {
     const [newTodoText, setNewTodo] = React.useState("");
@@ -25,15 +26,16 @@ function ToDoForm() {
     return (
         <form onSubmit={OnCreate}>
             <label></label>
-            <textarea
+            <textarea className="textArea"
                 value={newTodoText}
                 onChange={OnChange}
-                placeholder="Create Your ToDo" />
-            <div>
-                <button type="button" onClick={OnCancel}>
+                placeholder="Create Your ToDo"
+                maxLength={180}/>
+            <div className="buttons">
+                <button className="btn cancelButton" type="button" onClick={OnCancel}>
                     Cancel
                 </button>
-                <button type="submit">
+                <button className="btn createButton" type="submit">
                     Create
                 </button>
             </div>

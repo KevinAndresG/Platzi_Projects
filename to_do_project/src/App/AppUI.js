@@ -1,12 +1,16 @@
 import React from "react";
-import { ToDoCounter } from '../ToDoCounter';
-import { ToDoSearch } from '../ToDoSearch';
+import { ToDoCounter } from "../ToDoCounter";
+import { ToDoSearch } from "../ToDoSearch";
 import { CreateToDo } from '../CreateToDo';
-import { ToDoList } from '../ToDoList';
-import { ToDoItem } from '../ToDoItem';
-import { ToDoContext } from '../ToDoContext'
+import { ToDoList } from "../ToDoList";
+import { ToDoItem } from "../ToDoItem";
+import { ToDoContext } from "../ToDoContext";
 import { Modal } from "../Modal";
 import { ToDoForm } from "../ToDoForm";
+import { ToDosError } from "../TodosError";
+import { ToDosLoading } from "../TodosLoading ";
+import { EmptyToDos } from "../EmptyTodos";
+import { ToDoCounterLoading } from "../ToDoCounterLoading";
 
 function AppUI() {
     const { error,
@@ -15,17 +19,18 @@ function AppUI() {
         completeTodo,
         deleteTodo,
         openModal,
-        // setOpenModal,
     } = React.useContext(ToDoContext)
 
     return (
         <React.Fragment>
-            <ToDoCounter />
+            <ToDoCounter>
+                {loading && <ToDoCounterLoading />}
+            </ToDoCounter>
             <ToDoSearch />
             <ToDoList>
-                {error && <p>Error Founded!!!</p>}
-                {loading && <p>!!!Wait...Loading!!!</p>}
-                {(!loading && !searchedToDos.length) && <p>!!!Create Your First ToDo!!!</p>}
+                {error && <ToDosError error={error} />}
+                {loading && <ToDosLoading />}
+                {(!loading && !searchedToDos.length) && <EmptyToDos />}
                 {searchedToDos.map(todo => (<ToDoItem
                     key={todo.text}
                     text={todo.text}

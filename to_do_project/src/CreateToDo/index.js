@@ -1,19 +1,17 @@
 import React from "react";
 import "./CreateToDo.css"
 import { ToDoContext } from "../ToDoContext";
+import { HiOutlinePlusCircle } from "react-icons/hi"
+
 
 function CreateToDo() {
-	const { setOpenModal, openModal } = React.useContext(ToDoContext);
+	const { setOpenModal, openModal,  searchedToDos} = React.useContext(ToDoContext);
 	function onClickbtn() {
-		if (openModal) {
-			setOpenModal(false);
-		} else {
-			setOpenModal(true);
-		}
+		setOpenModal(true);
 	}
 	return (
 		<div className="divButton">
-			<button className={`button hovCreate ${openModal && 'buttonDark'}`} onClick={() => onClickbtn()}>+</button>
+			<button className={`button hovCreate ${(openModal && searchedToDos.length && 'buttonDark') || (searchedToDos.length <= 0 && 'hidebtn')}`} onClick={() => onClickbtn()}> <HiOutlinePlusCircle className="plusCircle"/></button>
 		</div>);
 		
 }

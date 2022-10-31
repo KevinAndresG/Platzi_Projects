@@ -22,7 +22,7 @@ function useLocalStorage(itemName, initialValue) {
         } catch (error) {
           setError(error);
         }
-      }, 1000);
+      }, 4000);
     });
     function SaveItem(newToDos) {
       try {

@@ -1,12 +1,6 @@
 .title {
   position: relative;
-  /* text-align: center; */
-  /* color: white; */
-  animation: infinite 20s linear;
   cursor: pointer;
-  /* box-shadow: 0px 0px 15px rgb(0, 255, 255); */
-  /* margin-left: 10%; */
-  /* margin-right: 10%; */
   padding: 0;
   display: inline;
 }
@@ -15,34 +9,37 @@
   text-shadow: 1px 1px 3px rgb(0, 255, 255), -1px -1px 3px rgb(0, 255, 255);
 }
 .totalToDos{
-  text-shadow: 1px 1px 3px rgb(0, 255, 255), -1px -1px 3px rgb(0, 255, 255);
-  color: turquoise;
-}
-.completedToDos{
-  text-shadow: 1px 1px 3px rgb(0, 255, 0), -1px -1px 3px rgb(0, 255, 0);
-  color: rgb(1, 207, 1);
-}
-.ToDosCompletedText:hover{
-  color: rgb(121, 121, 121);
-  
-  cursor: default;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0), -1px -1px 5px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .totalToDos:hover{
   color: rgb(109, 255, 240);
   cursor: default;
 }
+.ToDosCompletedText:hover{
+  color: rgb(121, 121, 121); 
+  cursor: default;
+}
+.completedToDos{
+  text-shadow: 1px 1px 5px rgb(0, 0, 0), -1px -1px 5px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
 .completedToDos:hover{
   color: rgb(58, 235, 58);
   cursor: default;
 }
-/* .hovCounter:hover {
-  color: rgb(0, 255, 123);
-  cursor: default;
-} */
 .titleHeader {
   width: 35%;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.doNotShow {
+  display: none;
+}
+.show {
+  display: block;
 }
